@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
+    <link href="style/style.css" rel="stylesheet" >
+    <script scr = "scripts/bounce.js" ></script>
+    <script scr = "scripts/pieChart.js" ></script>
+    <title>Podręcznik :)</title>
+</head>
+<body>
+    <header class="header-area overlay">
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <div class="container">
+                <a href="index.html" class="navbar-brand">PiotrJeka</a>
+                
+                <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#main-nav">
+                    <span class="menu-icon-bar"></span>
+                    <span class="menu-icon-bar"></span>
+                    <span class="menu-icon-bar"></span>
+                </button>
+                
+                <div id="main-nav" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li><a href="index.html" class="nav-item nav-link active">Home</a></li>
+                        <li><a href="form.html" class="nav-item nav-link">Formularz</a></li>
+                        <li><a href="#" class="nav-item nav-link">Podręcznik</a></li>
+                        <li><a href="list.html" class="nav-item nav-link">List</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        </header>
+        <main class = "fill podrecznikBG">
+        <div class="container formBox shadow p-3 text-justify overflow-auto">
+            <h1>Jak radzić sobie ze złożonością?</h1>
+            <h2>Funkcje</h2>
+            <p>W większości podręczników programowania funkcje definiuje się jako fragmenty kodu wielokrotnego stosowania. Na przykład w kodzie:</p>
+            <pre><code>
+            1 if liczba < 0:
+            2 liczba = 256+liczba
+            3 szyfr = (liczba + klucz) % 256
+            4 else:
+            5 szyfr = (liczba + klucz) % 256
+            </code></pre>
+            <p>Powtarza się wyliczenie wartości zmiennej szyfr. Możemy wydzielić ten fragment nadając mu jakąś nazwę (tu: szyfruj):</p>
+            <pre><code>
+            1 def szyfruj():
+            2 szyfr = (liczba + klucz) % 256
+            3
+            4 if liczba < 0:
+            5 liczba = 256+liczba
+            6 szyfruj()
+            7 else:
+            8 szyfruj()
+            </code></pre>
+            <p>Słowo kluczowe def oznacza definicję funkcji – czyli właśnie tego powtarzalnego fragmentu
+            programu. Po nagłówku zaczynającym się od def następuje blok kodu stanowiący tak zwane „ciało”
+            funkcji. Interpreter Pythona napotykając napis szyfruj() odszukuje definicję funkcji i wykonuje blok
+            ciała funkcji.
+            </p>
+            <div class="container">
+                    <div class ="container" style ="width: 50%; height: 50%;">
+                        <canvas id="pie-chart" width="10vw" height="10vh"></canvas>
+                    </div>
+                    
+            </div>
+            <br>
+            <img src = 'https://vegibit.com/wp-content/uploads/2016/05/How-do-functions-work-in-Python.jpg' style="width: 50%; height: 50%" class = "rounded float-left me-3">
+            <p>
+                W takim prostym stosunkowo kodzie korzyści zastosowania funkcji nie są oczywiste - zwłaszcza,
+                że rodzi ono dodatkowe problemy o których trzeba pamiętać.
+                Przykład powyższy nie jest w pełni poprawny. Zmienne są tworzone z chwilą ich użycia. Jeśli
+                zmienna pojawi się w funkcji – to jest nazywana zmienną lokalną i nie istnieje po zakończeniu
+                funkcji. Jeśli więc dopiszemy na końcu print(szyfr) to nie wydrukuje się wynik działania funkcji.
+                Poniżej znajduje się wyjaśnienie pojęcia wyniku funkcji, dzięki któremu można ten program
+                poprawić.
+                Na dodatek łatwo zmienić kod programu eliminując powtórzenia
+            </p>
+            <pre><code>
+    1 if liczba < 0:
+    2 liczba = 256+liczba
+    3 szyfr = (liczba + klucz) % 256
+            </code></pre><br>
+            <p>
+                Ten sposób upraszczania kodu jest lepszy niż stosowanie funkcji. Podstawowym zastosowaniem funkcji nie jest wcale eliminacja powtórzeń, ale właśnie uczynienie kodu bardziej czytelnym. 
+            </p>
+            </div>
+    </main>
+    <script>
+        new Chart(document.getElementById("pie-chart"), {
+            type: 'pie',
+            data: {
+                labels: ["Python", "Java", "JavaScript", "C#", "C/C++"],
+                datasets: [{
+                    label: "Popularność w %",
+                    backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
+            data: [29.93, 17.78, 8.79, 6.73, 6.45]
+        }]
+    },
+    options: {
+        title: {
+            display: true,
+            text: 'Najpopularniejsze języki programowania w 2021.',
+            
+        },
+    }
+    });  
+    </script>
+</body>
+
+
+</html>
+
