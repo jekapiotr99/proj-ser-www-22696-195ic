@@ -3,7 +3,7 @@ function gettime() {
     var date = new Date();
     this.year = date.getUTCFullYear();
     this.day = date.getUTCDate();
-    this.month = date.getMonth()+1;
+    this.month = date.getMonth() + 1;
     var hr = date.getHours();
     var m = date.getMinutes();
     var s = date.getSeconds();
@@ -13,9 +13,17 @@ function gettime() {
     if (s < 10) {
         s = "0" + s
     }
-    if(document.getElementById("clock") != null) {
+    if (document.getElementById("clock") != null) {
         document.getElementById("clock").innerHTML = year + '/' + month + '/' + day + ', ' + hr + ":" + m + ":" + s;
     }
     setTimeout("gettime()", 1000);
 }
-
+var text;
+document.getElementById("left").addEventListener("mouseenter", function() {
+    credit = document.getElementById("left");
+    text = credit.innerHTML;
+    credit.innerHTML = "https://github.com/jekapiotr99/";
+})
+document.getElementById("left").addEventListener("mouseout", function() {
+    credit.innerHTML = text;
+})

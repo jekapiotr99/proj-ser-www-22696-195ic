@@ -27,4 +27,5 @@ function sendForm() {
       div.appendChild(img);
     }, 2000);
   
-  }
+}
+

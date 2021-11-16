@@ -62,7 +62,13 @@ p {
   -ms-transform: scaleX(1);
   transform: scaleX(1);
 }
-
+.box{
+  width: 40%; height: 40%; 
+  background-color: #17a2b8;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
 .overlay::after {
   content: '';
   position: absolute;
@@ -210,7 +216,32 @@ p {
 .content {
   padding: 120px 0;
 }
+#ahover {
+  transition: color 0.55s ease;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.grid2x2 {
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.grid2x2 > div {
+  display: flex; 
+  flex-basis: calc(50% - 40px);  
+  justify-content: center;
+  flex-direction: column;
+}
+.grid2x2 > div > div {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
 
+.box { margin: 20px; }
 
 @media screen and (max-width: 768px) {
   .navbar-brand {
