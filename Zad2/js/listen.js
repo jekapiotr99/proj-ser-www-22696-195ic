@@ -3,7 +3,7 @@ function gettime() {
     var date = new Date();
     this.year = date.getUTCFullYear();
     this.day = date.getUTCDate();
-    this.month = date.getUTCMonth();
+    this.month = date.getMonth()+1;
     var hr = date.getHours();
     var m = date.getMinutes();
     var s = date.getSeconds();
