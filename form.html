@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link href="style/style.css" rel="stylesheet">
+  <script scr="scripts/bounce.js"></script>
+
+  <title>Formularz :)</title>
+</head>
+
+<body onload='gettime()'>
+  <header class="header-area overlay">
+    <nav class="navbar navbar-expand-md navbar-dark">
+      <div class="container">
+        <a href="index.html" class="navbar-brand">PiotrJeka</a>
+
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#main-nav">
+          <span class="menu-icon-bar"></span>
+          <span class="menu-icon-bar"></span>
+          <span class="menu-icon-bar"></span>
+        </button>
+
+        <div id="main-nav" class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+            <li><a href="index.html" class="nav-item nav-link active">Home</a></li>
+            <li><a href="#" class="nav-item nav-link">Formularz</a></li>
+            <li><a href="podrecznik.html" class="nav-item nav-link">Podręcznik</a></li>
+            <li><a href="list.html" class="nav-item nav-link">List</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="fill formularzBG">
+    <div class="container d-flex justify-content-center formBox shadow p-3 vertical-center" id="mainNode">
+      <form style="width: 100%; height: 100%; margin: 30px;" id='formNode'>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="Imie">Imię</label>
+            <input type="text" class="form-control" id="Imie" placeholder="Imię">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="Nazwisko">Nazwisko</label>
+            <input type="text" class="form-control" id="Nazwisko" placeholder="Nazwisko">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputAddress">Adres</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="Miasto, Ulica">
+        </div>
+        <div class="form-group">
+          <label for="inputAddress2">Adres</label>
+          <input type="text" class="form-control" id="inputAddress2" placeholder="Nr apartamentu, bloku, piętro">
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCity">Miasto</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputState">Województwo</label>
+            <select id="inputState" class="form-control">
+              <option selected>Choose...</option>
+              <option>...</option>
+            </select>
+          </div>
+          <div class="form-group col-md-2">
+            <label for="inputZip">Zip Code</label>
+            <input type="text" class="form-control" id="inputZip">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+              &nbsp&nbspDodaj mnie do bazy
+            </label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" onclick="sendForm()">Dodaj</button>
+      </form>
+    </div>
+  </main>
+  <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
+    <div class="d-flex justify-content-between px-5">
+      <div>
+        Copyright &copy; Piotr Jeka 2021
+      </div>
+      <div id="clock">
+        time
+      </div>
+    </div>
+
+  </footer>
+  <script src="js/app.js" defer></script>
+</body>
+
+</html>
