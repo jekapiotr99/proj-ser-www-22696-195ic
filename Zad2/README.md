@@ -31,7 +31,7 @@ wymaganego input'u użytkownika.
 
 ![obraz](https://user-images.githubusercontent.com/56678518/142066127-f045f9cc-248e-4c51-bab3-870353338e92.png)
 
-Za pomocą zdarzenia keypress, dodana została funkcjonalność, pozwalająca na odtworzenia działania przycisku "Dowiedz się więcej" za
+Za pomocą zdarzenia keypress, dodana została funkcjonalność, pozwalająca na odtworzenie działania przycisku "Dowiedz się więcej" za
 pomocą wciśnięcia przycisku na klawiaturze. Po wciśnięciu klawisza "S" odtworzona zostanie ta funkcjonalość.
 
 
@@ -45,6 +45,6 @@ się zmniejsza.
 względem całego okna strony.
 - W lewym dolnym rogu za pomocą zdarzenia *keyup* sprawdzimy, jakie klawisze zostały wciśnięte przez użytkownika, oraz wyświetlimy
 ciąg wciśniętych klawiszy.
-- Ostatni kontener zawiera zdarzenie *copy*. Po skopiowaniu zawartości kontenera, wartość tekstu zmieni się.
+- Ostatni kontener zawiera zdarzenie *copy*. Po skopiowaniu zawartości kontenera, tekst się zmieni.
 
 ![obraz](https://user-images.githubusercontent.com/56678518/142066453-bb9c6faf-e5a7-40ac-a95a-e401d95af397.png)
