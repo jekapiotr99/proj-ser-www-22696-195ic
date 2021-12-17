@@ -1,46 +1,101 @@
 # proj-ser-www-22696-195ic
 
-## Laboratorium nr.2- "Praca z elementami DOM z wykorzystaniem Javascript"
-
-Laboratorium nr.2 jest rozszerzeniem pracy wykonanej na pierwszych zajęciach. 
-Strona została jedynie poszerzona o dodatkowe funkcji.
+## Laboratorium nr. 5 - "Asynchroniczny Javascript"
 
 
-###element wspólny 
-Na każdej stronie została dodana stopka z informacją o prawach autorskich jak i o autorze, 
-oraz dodany został zegar który co każdą sekundę się uaktualnia.
+Tworzenie obiektu JSON z podwójnym zagnieżdzeniem: 
+- pierwsze zagnieżdzenie - details,
+- drugie zagnieżdzenie - address
 
-![obraz](https://user-images.githubusercontent.com/56678518/141504668-f1052df3-506e-441b-8fca-d267185c85da.png)
+![obraz](https://user-images.githubusercontent.com/56678518/146575692-f86d097a-aad8-4d7b-a044-f8cf9910728a.png)
 
-###index.html
-Na stronie startowej dodany został przycisk, po którego kliknięciu pojawi się nowe okno wraz z opisem zachęty, pozwalający
-na wybranie koloru naszego górnego banneru. Po wybraniu koloru oraz zatwierdzeniu naszego wyboru kolor ten się przejdzie z poprzedniego koloru do nowego w płynnej animacji.
+####Callback - metoda ta jest przekazywana jako argument jednej funkcji, po czym jest wywoływana by wykonać jej ciało funkcji z parametrami funkcji rodzica
 
-Przed kliknięciem:
-![obraz](https://user-images.githubusercontent.com/56678518/141504975-97bc4323-090d-4e62-9bcf-31bb6f77abee.png)
+Callback 1:
 
-Po kliknięciu i wybraniu nowego koloru:
-![obraz](https://user-images.githubusercontent.com/56678518/141505089-dacda1f0-f318-44af-85d3-2565aacc7294.png)
+![obraz](https://user-images.githubusercontent.com/56678518/146576386-076ec017-0360-450c-a775-60843bf35aba.png)
 
-###form.html - formularz
-W zakładce formualrza dodana została animacja wysyłania naszego zgłoszenia/danych. Najpierw wszystkie elementy wewnątrz 
-środkowego kontenera zostaną zniszczone, następnie sam kontener w płynnej animacji zniknie z ekranu, po czym ukaże nam się 
-napis o wysłaniu wiadomości jak i grafika.
+Callback 2:
 
-Widok przed wysłaniem:
-![obraz](https://user-images.githubusercontent.com/56678518/141505572-30574756-1319-4d7e-a6e1-adf0ffdf5320.png)
+![obraz](https://user-images.githubusercontent.com/56678518/146576878-6f45e7d0-0033-42bd-9df5-6d9e7f2d1076.png)
 
-Widok po wysłaniu:
-![obraz](https://user-images.githubusercontent.com/56678518/141505519-1f6888e8-5a64-4cd7-9c4a-c866eee26559.png)
+Wynik Callback 1 i 2:
 
-###podrecznik.html - podrecznik
-W zakładce podręcznika został umieszczony wykres przy użyciu biblioteki chart.js.
+![obraz](https://user-images.githubusercontent.com/56678518/146576820-9ab12a7f-4789-41eb-b6f3-9676b798544d.png)
 
-![obraz](https://user-images.githubusercontent.com/56678518/141505793-d6fe766e-6663-45e0-8e6c-f6dab3f7da5d.png)
+####Promise - metody, których zadaniem jest sprawdzenie poprawności wywołania kodu oraz zwrócenie komunikatu, bądź wartości o poprawnym lub niepoprawnym wykonaniu kodu.
+Kod Promise został wywołany jako metoda funkcji fetch która pobiera informacje o pliku json. Ma to na celu umożliwić
+dostęp do zmiennych pobranego obiektu.
 
-###List.html
-W zakładce listu, aby zsymulować aktualne pisanie listu postanowiłem stworzyć animację, która wypiszę wszystkie słowa naszego
-tekstu litera po literze. Następnie po wypisaniu całego tekstu, na dole pojawia się podpis autora napisany od prawej strony.
+Promise 1:
 
-Strona w trakcie pisania listu:
-![obraz](https://user-images.githubusercontent.com/56678518/141505862-dc74030b-2153-4ee6-8f81-edc4c32cb0ef.png)
+![obraz](https://user-images.githubusercontent.com/56678518/146578495-b1973b37-a3c2-47fe-a07d-f270d2cdc116.png)
+
+Promise 2:
+
+![obraz](https://user-images.githubusercontent.com/56678518/146578712-56fd067b-d5c1-4706-9b76-312dfe3b7532.png)
+
+Wynik Promise 1 i 2:
+
+![obraz](https://user-images.githubusercontent.com/56678518/146578781-6222206a-bf2d-4b58-a46e-818fc5dd1d6b.png)
+
+####await - operator używany w asynchronicznych funkcjach pozwalający na poczekanie na wynik metody Promise.
+
+await 1:
+
+![obraz](https://user-images.githubusercontent.com/56678518/146578947-b9ebc688-7e82-4277-8261-a6dad09777df.png)
+
+await 2:
+
+![obraz](https://user-images.githubusercontent.com/56678518/146578970-f928cdc3-f2cb-4748-b6e9-daf52a621b9c.png)
+
+Wynik await 1 i 2:
+
+![obraz](https://user-images.githubusercontent.com/56678518/146579022-2baffd38-8bb0-4a1c-90cd-69fb7ae16065.png)
+
+#### Ajax pozwala stronie na asynchroniczne wymianianie się danymi z serwerem. Pozwala nam na aktualizacje zawartości strony bez jej odświeżania
+
+Ajax 1:
+
+![obraz](https://user-images.githubusercontent.com/56678518/146579189-860f9f97-c5d2-4832-9f4a-40da9c36bf1a.png)
+
+Ajax 2:
+
+![obraz](https://user-images.githubusercontent.com/56678518/146579218-3ff370ce-c1f2-4ac6-b223-7e53e875b85e.png)
+
+Wynik Ajax 1 i 2:
+
+![obraz](https://user-images.githubusercontent.com/56678518/146579257-2d763b2b-37c4-4755-9bef-b896f1eed358.png)
+
+#### Fetch funkcja pozwalająca na asychroniczne pobieranie danych z całej sieci
+
+Fetch 1:
+
+![obraz](https://user-images.githubusercontent.com/56678518/146579571-bb22904a-1e94-488a-bd39-434c485e4694.png)
+
+Fetch 2:
+
+![obraz](https://user-images.githubusercontent.com/56678518/146579596-48308c1f-e244-439c-a63e-4df46877ade4.png)
+
+Wynik Fetch 1 i 2:
+
+![obraz](https://user-images.githubusercontent.com/56678518/146579847-3cd07119-2aaf-46af-906d-f83357d40a69.png)
+
+#### Axios to zewnętrzny klient oparty o promise'y dla klienta HTTP node.js i przeglądarki. Po stronie serwera wykorzystuje node.js, natomiast po stronie klienta ( przeglądarki ) wykorzystuje XMLHttpRequests (AJAX)
+
+Axios 1:
+
+![obraz](https://user-images.githubusercontent.com/56678518/146580270-4ad547c5-342e-487d-b215-887511e7485e.png)
+
+Axios 2:
+
+![obraz](https://user-images.githubusercontent.com/56678518/146580305-1a718412-c9a3-4503-97cf-ed08ddb4bbb8.png)
+
+Wynik Axios 1 i 2:
+
+![obraz](https://user-images.githubusercontent.com/56678518/146580375-31a3e45e-cc22-4430-8c6f-f6a68ca615aa.png)
+
+
+Wszystkie wyniki: 
+
+![obraz](https://user-images.githubusercontent.com/56678518/146580437-4bf0f226-7d00-4fd3-b5b3-904eef811702.png)
