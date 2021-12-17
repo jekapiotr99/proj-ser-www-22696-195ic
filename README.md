@@ -9,7 +9,7 @@ Tworzenie obiektu JSON z podwójnym zagnieżdzeniem:
 
 ![obraz](https://user-images.githubusercontent.com/56678518/146575692-f86d097a-aad8-4d7b-a044-f8cf9910728a.png)
 
-####Callback - metoda ta jest przekazywana jako argument jednej funkcji, po czym jest wywoływana by wykonać jej ciało funkcji z parametrami funkcji rodzica
+#### Callback - metoda ta jest przekazywana jako argument jednej funkcji, po czym jest wywoływana by wykonać jej ciało funkcji z parametrami funkcji rodzica
 
 Callback 1:
 
@@ -23,7 +23,7 @@ Wynik Callback 1 i 2:
 
 ![obraz](https://user-images.githubusercontent.com/56678518/146576820-9ab12a7f-4789-41eb-b6f3-9676b798544d.png)
 
-####Promise - metody, których zadaniem jest sprawdzenie poprawności wywołania kodu oraz zwrócenie komunikatu, bądź wartości o poprawnym lub niepoprawnym wykonaniu kodu.
+#### Promise - metody, których zadaniem jest sprawdzenie poprawności wywołania kodu oraz zwrócenie komunikatu, bądź wartości o poprawnym lub niepoprawnym wykonaniu kodu.
 Kod Promise został wywołany jako metoda funkcji fetch która pobiera informacje o pliku json. Ma to na celu umożliwić
 dostęp do zmiennych pobranego obiektu.
 
@@ -39,7 +39,7 @@ Wynik Promise 1 i 2:
 
 ![obraz](https://user-images.githubusercontent.com/56678518/146578781-6222206a-bf2d-4b58-a46e-818fc5dd1d6b.png)
 
-####await - operator używany w asynchronicznych funkcjach pozwalający na poczekanie na wynik metody Promise.
+#### await - operator używany w asynchronicznych funkcjach pozwalający na poczekanie na wynik metody Promise.
 
 await 1:
 
